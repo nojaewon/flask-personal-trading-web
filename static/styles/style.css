@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::before, .clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.login-page {
+    width: 360px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-150%, -50%);
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #F5B971;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.form .message a {
+    color: #F5B971;
+    text-decoration: none;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    /* background-color: rgba(0,0,0,0.1); */
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* header */
+#header {
+    width: 100vw; height: 8vh;
+    background-color: #F5B971;
+}
+
+#header .logo {
+    float: left;
+    width: 200px;
+    line-height: 60px;
+}
+
+#header .logo a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Gugi', cursive;
+}
+
+#header .search {
+    float: left;
+    position: relative;
+    width: 350px; height: 40px;
+    margin: 10px 410px 10px 40px;
+    border: 1px solid #555;
+}
+
+#header .search input[type="search"] {
+    width: 350px; height: 40px;
+    padding: 10px;
+    border: none;
+    background: none;    
+}
+
+#header .search input[type="submit"] {
+    position: absolute;
+    padding: 3px;
+    right: 10px; top: 7px;
+    background: none;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+#header .links {
+    float: left;
+    width: 200px;
+    line-height: 60px;
+}
+
+.links a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+#header .my-page {
+    font-size: 1em;
+}
+
+#header .logout_link {
+    margin-left: 5px;
+    font-family: 'gugi', cursive;
+}
+
+/* contents */
+
+#contents {
+    width: 100vw; height: 70vh;
+    background: none;
+    position: relative;
+}
+
+#contents .banner {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-500px, -80px);
+}
+
+#contents .banner h2 {
+    font-family: 'Gugi', cursive;
+    margin-bottom: 10px;
+}
+
+#contents .banner p {
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+#contents .banner a {
+    margin-top: 20px;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    text-align: center;
+    background-color: #F5B971;
+    color: #000;
+    font-size: 20px;
+    border-radius: 20px;;
+}
+
+#contents .table-container{
+    position: relative;
+}
+
+#contents .table {
+    position: absolute;
+    top: 0; left: 100px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.table tr {
+    height: 35px;
+}
+
+.table td {
+    padding-left: 20px;
+}
+
+.table thead .id {width: 100px;}
+.table thead .user {width: 200px;}
+.table thead .product {width: 200px;}
+.table thead .price {width: 100px;}
+
+.table .product-info {
+    text-decoration: none;
+    font-family: 'gugi', cursive;
+    color: #000;
+}
+
+.page-controller {
+    position: absolute;
+    top: 85%; left: 22%;
+}
+
+.page-controller a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 1px;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+
+/*footer*/
+#footer {
+    font-size: 0.8em;
+}
+
+#footer h1.logo {
+    width: 20%;
+    height: 100%;
+    padding-top: 70px;
+    float:left;
+    text-align: center;
+    color: #eee;
+}
+
+#footer h1.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Gugi', cursive;
+}
+
+#footer .downmenu {
+    width: 80%;
+    height: 50%;
+    float: left;
+}
+
+#footer .downmenu {}
+
+#footer .downmenu ul{
+    width: 60%;
+    height: 100%;
+    padding-top: 30px;
+    margin-left: 35%;
+}
+#footer .downmenu ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+    margin-left: 10px;
+}
+#footer .downmenu ul li a{
+    line-height: 50px;
+    text-decoration: none;
+    color: #eee;
+}
+
+#footer .copyright {
+    width: 80%;
+    height: 50%;
+    float: left;
+}
+#footer .copyright p  {
+    color: #ddd;
+    text-align: center;
+}
+
+#footer {
+    width: 100vw; height: 22vh;
+    background-color: #666;
+}
+
+.mypage-interface {
+    width: 400px; height: 400px;
+    position: absolute;
+    top: 15%; left: 100%;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px #333;
+}
+
+.mypage-interface .mypage-close {
+    text-decoration: none;
+    color: #000;
+    font-family: 'gugi', cursive;
+    position: absolute;
+    bottom: 10px; right: 10px;
+}
