@@ -1,5 +1,7 @@
 <!-- jinja2 템플릿 언어를 사용함 -->
 <!-- 전체 기본 구조(상속) -->
+{% set option_list = ["가구류", "과일/채소", "도서/문제집", "악세사리", "기타"] %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +21,7 @@
 
     {% if template.user.isLogged %}
     <!--물품등록 폼-->
-    <form class="product-form" action="#" method="post" enctype="multipart/form-data">
+    <form class="product-form post" action="/product-form" method="post">
         <div class="labels">
             <div class="label">
                 <label for="name">Name</label>
@@ -36,17 +38,14 @@
             <div class="label">
                 <label for="image">Image</label>
                 <select name="image" id="image">
-                    <option value="0">가구류</option>
-                    <option value="1">과일/채소</option>
-                    <option value="2">도서/문제집</option>
-                    <option value="3">악세사리</option>
-                    <option value="4">기타</option>
+                    {% for op in option_list %}
+                        <option value="{{loop.index0}}">{{op}}</option>
+                    {% endfor %}
                 </select>
             </div>
         </div>
         
-        <textarea class="span" name="desc" id="desc"/>물품에 대한 설명을 써주세요!
-        </textarea>
+        <textarea class="span" name="desc" id="desc"/ placeholder="물품에 대한 설명을 써주세요!"></textarea>
         </p>
         <input type="submit" value="SEND" id="product-submit"/>
         <a href="#" class="close-form">닫기</a>
@@ -61,7 +60,7 @@
         {% for product in template.all_Products %}
             {% if template.user.name==product.user_id %}
                 <li>
-                    <span class="product-name"><a href="product-info/{{product.id}}" class="product-info">{{product.name}}</a></span>
+                    <span class="product-name"><a href="/product-info/{{product.id}}" class="product-info">{{product.name}}</a></span>
                     <span class="price">{{product.price}}</span>
                 </li>
             {%endif%}
@@ -97,7 +96,7 @@
                 <h1 class="logo">
                     <a href="/">돼지마켓</a>
                 </h1>
-                <form class="search" action="/product">
+                <form class="search" action="/search">
                     <input type="search" name="keyword" placeholder="물품 키워드를 검색해보세요!">
                     <input type="submit">
                 </form>

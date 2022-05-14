@@ -196,9 +196,22 @@ body {
 }
 
 
-.product-form {
+.post {
     position: absolute;
     top: 60px; left: 100px;
+    width: 600px; height: 500px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 4px #888;
+    border-radius: 10px;
+    z-index: 10;
+    display: none;
+    padding: 25px;
+}
+
+.update {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     width: 600px; height: 500px;
     background-color: #fff;
     box-shadow: 1px 1px 10px 4px #888;
@@ -509,10 +522,7 @@ body {
     font-family: 'Jua', sans-serif;
 }
 
-.product-info-container .product-info .title {
-}
-
-..product-info-container product-info .info {
+.product-info-container product-info .info {
     margin-left: 30px;
 }
 
@@ -528,13 +538,24 @@ body {
     box-shadow: 0px 8px 15px 10px #aaa;
 }
 
-.product-info-container .backLink {
+.product-info-container .aLink {
     position: absolute;
-    bottom: 50px; right: 50px;
     text-decoration: none;
     color: #fff;
     display: block;
     padding: 10px;
     background-color: #555;
     border-radius: 20px;
+}
+
+.product-info-container .backLink {
+    bottom: 50px; right: 50px;
+}
+
+.product-info-container .updateLink {
+    bottom: 50px; left: 0px;
+}
+
+.product-info-container .deleteLink {
+    bottom: 50px; left: 100px;
 }
